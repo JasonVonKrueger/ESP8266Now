@@ -12,3 +12,7 @@ I'll use https://www.makeuseof.com/tag/wifi-connected-button-esp8266-tutorial/ a
 Actually, maybe I'll make use of the LCD to give feedback....yeah, I think I'll do that.  Make it return the incident number or whatever.
 
 I'm using the on-board PRG/FLASH button to keep it simple.
+
+https://www.dropbox.com/s/gb85ydpxjefr60j/IMG_1810.MOV?dl=0
+
+Can you guess what I was watching?
