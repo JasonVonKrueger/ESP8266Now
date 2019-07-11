@@ -16,3 +16,7 @@ I'm using the on-board PRG/FLASH button to keep it simple.
 https://www.dropbox.com/s/gb85ydpxjefr60j/IMG_1810.MOV?dl=0
 
 Can you guess what I was watching?
+
+
+![The board](https://raw.githubusercontent.com/JasonVonKrueger/ESP8266Now/master/Resources/2019-07-11_08h41_18.png)
+
