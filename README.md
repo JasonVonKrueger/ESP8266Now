@@ -51,7 +51,7 @@ const int buttonPin = 0;
 int buttonState = 0; 
 ```
 
-After the inital setup, the device sits in a loop waiting for stuff to happen. In this case, we're constantly polling the button state.  If the button's state becomes LOW (or 0), then fire off incident creation.
+After the inital setup, the device sits in a loop waiting for stuff to happen. In this case, we're constantly polling the button state.  If the button's state becomes LOW (or 0), then fire off incident creation.  Note: in the initial code above, we're setting `buttonState` to 0 but the actual, not pushed state is HIGH.  So, in the loop, `buttonState` is going to be HIGH until the button is pushed.
 
 ```c
 void loop() {
