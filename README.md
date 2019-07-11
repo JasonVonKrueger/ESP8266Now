@@ -26,3 +26,5 @@ That's it.  No circuits to build.  You just need to have the board and set up yo
 https://www.makeuseof.com/tag/wifi-connected-button-esp8266-tutorial/
 
 On the ServiceNow side, it's just a simple REST API that uses the GlideRecord class to create an incident. To make this work with minimal fuss, I did remove the requirement for authentication.  Don't tell ServiceNow.
+
+![What not to do](https://raw.githubusercontent.com/JasonVonKrueger/ESP8266Now/master/Resources/2019-07-11_18h14_20.png)
