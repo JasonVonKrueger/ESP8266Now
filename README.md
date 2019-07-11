@@ -50,3 +50,15 @@ const char fingerprint[] PROGMEM = "03 46 c1 6e 3b f2 de eb 07 c3 a1 65 84 fc 65
 const int buttonPin = 0;
 int buttonState = 0; 
 ```
+
+After the inital setup, the device sits in a loop waiting for stuff to happen. In this case, we're constantly polling the button state.  If the button's state becomes LOW (or 0), then fire off incident creation.
+
+```c
+void loop() {
+  buttonState = digitalRead(buttonPin);
+  
+  if (buttonState == LOW) {
+    createIncident();
+  }
+}
+```
