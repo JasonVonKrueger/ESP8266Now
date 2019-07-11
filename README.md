@@ -62,3 +62,28 @@ void loop() {
   }
 }
 ```
+
+To create the incident, I'm simply formatting a GET request to the host, port and URI.  If I weren't being lazy, I would have used a good REST client library for this.  But I was being lazy.
+
+```c
+void createIncident() {
+  String url = "/api/159204/espynow";
+  
+  WiFiClientSecure client;
+  client.setFingerprint(fingerprint);
+  
+  if (!client.connect(host, httpsPort)) {
+    Serial.println("connection failed");
+    delay(5000);
+    return;
+  }
+  
+  client.print(String("GET ") + url + " HTTP/1.1\r\n" +
+               "Host: " + host + "\r\n" +
+               "User-Agent: ESPYNow\r\n" +
+               "Connection: close\r\n\r\n");   
+                
+  Serial.println("request sent"); 
+   
+}
+```
