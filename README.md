@@ -31,6 +31,8 @@ On the ServiceNow side, it's just a simple REST API that uses the GlideRecord cl
 
 # The Code
 
+We start out by including the proper libraries and defining my home's WiFi password.  Without the proper libraries, the device is pretty stupid.  So we have to tell it what port to use for HTTPS as well as provide the thumbprint from my dev site's X.509 certificate.  Then we set the pin number of the button as 0 which is the button the arrow above is pointing to.  Finally we set the button state to 0.
+
 ```c
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
