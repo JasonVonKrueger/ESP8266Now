@@ -46,7 +46,7 @@ void createIncident() {
   
   client.print(String("GET ") + url + " HTTP/1.1\r\n" +
                "Host: " + host + "\r\n" +
-               "User-Agent: BuildFailureDetectorESP8266\r\n" +
+               "User-Agent: ESPYNow\r\n" +
                "Connection: close\r\n\r\n");   
                 
   Serial.println("request sent"); 
