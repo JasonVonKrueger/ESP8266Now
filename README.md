@@ -28,3 +28,23 @@ https://www.makeuseof.com/tag/wifi-connected-button-esp8266-tutorial/
 On the ServiceNow side, it's just a simple REST API that uses the GlideRecord class to create an incident. To make this work with minimal fuss, I did remove the requirement for authentication.  Don't tell ServiceNow.
 
 ![What not to do](https://raw.githubusercontent.com/JasonVonKrueger/ESP8266Now/master/Resources/2019-07-11_18h14_20.png)
+
+# The Code
+
+```c
+#include <ESP8266WiFi.h>
+#include <WiFiClientSecure.h>
+
+#ifndef STASSID
+#define STASSID "AP_ID"
+#define STAPSK  "super_secret"
+#endif
+
+const char* ssid     = STASSID;
+const char* password = STAPSK;
+const char* host = "dev72113.service-now.com";
+const int httpsPort = 443;
+const char fingerprint[] PROGMEM = "03 46 c1 6e 3b f2 de eb 07 c3 a1 65 84 fc 65 43 9d a1 9c f8";
+const int buttonPin = 0;
+int buttonState = 0; 
+```
