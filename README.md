@@ -63,7 +63,7 @@ void loop() {
 }
 ```
 
-To create the incident, I'm simply formatting a GET request to the host, port and URI.  If I weren't being lazy, I would have used a good REST client library for this.  But I was being lazy.
+To create the incident, I'm simply formulating a GET request to the host, port and URI.  If I weren't being lazy, I would have used a good REST client library for this.  But I was being lazy.
 
 ```c
 void createIncident() {
@@ -86,4 +86,20 @@ void createIncident() {
   Serial.println("request sent"); 
    
 }
+```
+
+There are no parameters being sent.  Just visit the URL and an incident is created by the simple REST script below.
+
+```javascript
+(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var gr = new GlideRecord('incident');
+	gr.initialize();
+	
+	gr.caller_id = 'b483df9cdbe0330040dc9006db96190d';
+	gr.short_description = 'Button was pushed.';
+	
+	gr.insert();
+
+})(request, response);
 ```
